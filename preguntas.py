@@ -81,7 +81,7 @@ def pregunta_03():
                 count.append(int(i[1]))
             else:
                 count[letters.index(i[0])]+=int(i[1])
-    for j in eltters:
+    for j in letters:
         answer.append((j,count[letters.index(j)]))
     answer.sort(reverse=False)
 
@@ -270,7 +270,7 @@ def pregunta_08():
         answer.append((j, list(sorted(letters[numbers.index(j)]))))
     answer.sort()
     
-    return R8
+    return answer
 
 def pregunta_09():
     """
@@ -299,7 +299,7 @@ def pregunta_09():
             for j in dictionary: 
                 cadena = j.split(':')[0]
 
-                if cadena not in dic.keys():
+                if cadena not in dicc.keys():
                     dicc[cadena] = 1
                 else:
                     dicc[cadena] += 1
