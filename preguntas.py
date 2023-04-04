@@ -178,7 +178,7 @@ def pregunta_06():
     answer = []
     
     with open('data.csv') as datos:
-        datos = csv.reader(datos, delimiter=' ')
+        datos = csv.reader(datos, delimiter='	')
         for i in datos:
             dictionary = i[4].split(',')
             for j in dictionary: 
