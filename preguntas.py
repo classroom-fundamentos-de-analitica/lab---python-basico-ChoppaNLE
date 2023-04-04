@@ -10,6 +10,7 @@ básicas.
 Utilice el archivo `data.csv` para resolver las preguntas.
 
 """
+import csv
 
 def pregunta_01():
     """
@@ -24,7 +25,7 @@ def pregunta_01():
         for i in data:
             count += int(i[1])
 
-    return 214
+    return count
 
 def pregunta_02():
     """
