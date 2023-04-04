@@ -173,28 +173,26 @@ def pregunta_06():
         ("jjj", 5, 17),
     ]
     """
-    strings = []
-    value = []
-    answer = []
-    
-    with open('data.csv') as datos:
-        datos = csv.reader(datos, delimiter='	')
-        for i in datos:
-            dictionary = i[4].split(',')
-            for j in dictionary: 
-                string = j.split(':')[0]
-                value = j.split(':')[1]
 
-                if string not in strings:
-                    strings.append(string)
-                    value.append([int(value)])
+    stringls = []
+    values = []
+    answer = []
+    with open('data.csv') as data:
+        data = csv.reader(data, delimiter='	')
+        for i in data:
+            dic = i[4].split(',')
+            for j in dic: 
+                cadena = j.split(':')[0]
+                valor = j.split(':')[1]
+                if cadena not in stringls:
+                    stringls.append(cadena)
+                    values.append([int(valor)])
                 else:
-                    value[strings.index(string)].append(int(value))
-    for string in sorted(strings):
-        answer.append((string, min(value[strings.index(string)]), max(value[strings.index(string)])))
+                    values[stringls.index(cadena)].append(int(valor))
+    for cadena in sorted(stringls):
+        answer.append((cadena, min(values[stringls.index(cadena)]), max(values[stringls.index(cadena)])))
 
     return answer
-
 
 def pregunta_07():
     """
